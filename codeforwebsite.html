@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Janelle Edwards | Marketing Portfolio</title>
+<meta name="description" content="Janelle Edwards is a Rutgers marketing student who turns ideas into campaigns, events, and spaces that bring people together.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fcf9fa;
+    --ink: #24161d;
+    --muted: #6a5861;
+    --scarlet: #cc0033;
+    --blush: #f7dfe6;
+    --line: #e6d3da;
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --body: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #1a1015;
+      --ink: #f6eaee;
+      --muted: #c2adb5;
+      --scarlet: #ff4d70;
+      --blush: #3a2029;
+      --line: #4a313b;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  a { color: inherit; }
+  a:focus-visible { outline: 3px solid var(--scarlet); outline-offset: 3px; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+
+  header.top { padding: 22px 0; border-bottom: 1px solid var(--line); }
+  header.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .name { font-family: var(--display); font-weight: 800; font-size: 1.15rem; text-decoration: none; }
+  nav a { margin-left: 22px; text-decoration: none; font-weight: 500; color: var(--muted); }
+  nav a:hover { color: var(--scarlet); }
+
+  .hero { padding: 88px 0 72px; }
+  .hero p.lead {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(2rem, 5.6vw, 3.6rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 28px;
+    max-width: 18em;
+  }
+  .hero p.lead mark {
+    background: linear-gradient(transparent 62%, var(--blush) 62%);
+    color: inherit;
+    padding: 0 .05em;
+  }
+  .hero .sub { color: var(--muted); max-width: 36em; margin: 0 0 28px; }
+  .btn {
+    display: inline-block;
+    background: var(--scarlet);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  .btn.ghost { background: transparent; color: var(--ink); border: 2px solid var(--ink); padding: 10px 20px; }
+  .btn:hover { filter: brightness(1.08); }
+
+  section { padding: 64px 0; border-top: 1px solid var(--line); }
+  h2 { font-family: var(--display); font-size: 1.9rem; margin: 0 0 32px; letter-spacing: -0.01em; }
+
+  .skill-group { display: grid; grid-template-columns: 200px 1fr; gap: 12px 32px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+  .skill-group:last-child { border-bottom: 0; }
+  .skill-group h3 { margin: 0; font-family: var(--display); font-size: 1.05rem; }
+  .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .chips li { background: var(--blush); padding: 6px 14px; border-radius: 999px; font-size: .95rem; font-weight: 500; }
+
+  .project { padding: 28px 0; border-bottom: 1px solid var(--line); }
+  .project:first-of-type { padding-top: 0; }
+  .project:last-of-type { border-bottom: 0; }
+  .project h3 { font-family: var(--display); font-size: 1.45rem; margin: 0 0 4px; }
+  .project .meta { color: var(--muted); font-size: .95rem; margin: 0 0 12px; }
+  .project p { margin: 0 0 14px; max-width: 40em; }
+  .project .result { font-weight: 700; }
+  .project .links a { color: var(--scarlet); font-weight: 700; margin-right: 18px; }
+
+  footer { padding: 56px 0 72px; border-top: 1px solid var(--line); }
+  footer p { margin: 0 0 8px; }
+  footer .small { color: var(--muted); font-size: .9rem; margin-top: 24px; }
+
+  @media (max-width: 640px) {
+    nav a { margin: 0 16px 0 0; }
+    .hero { padding: 56px 0 48px; }
+    .skill-group { grid-template-columns: 1fr; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="name" href="#top">Janelle Edwards</a>
+    <nav aria-label="Main">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="hero">
+      <!-- PERSONAL STATEMENT (one sentence) -->
+      <p class="lead">I'm Janelle Edwards, a Rutgers marketing student who turns ideas into <mark>campaigns, events, and spaces</mark> that bring people together.</p>
+      <p class="sub">Marketing major at Rutgers Business School, class of 2029. I run day-to-day operations at the Hatchery Innovation Studio and design content for student organizations.</p>
+      <a class="btn" href="#projects">See my projects</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+
+      <div class="skill-group">
+        <h3>Marketing and content</h3>
+        <ul class="chips">
+          <li>Social media management</li>
+          <li>Digital content creation</li>
+          <li>Video editing</li>
+          <li>Canva</li>
+          <li>Adobe</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Operations and events</h3>
+        <ul class="chips">
+          <li>Project management</li>
+          <li>Event planning</li>
+          <li>Space planning</li>
+          <li>Excel</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>How I work</h3>
+        <ul class="chips">
+          <li>Leadership initiative</li>
+          <li>Communication</li>
+          <li>Team collaboration</li>
+          <li>Relationship building</li>
+          <li>Critical thinking</li>
+          <li>Adaptability</li>
+          <li>Dependability</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <h3>Campus Ride-Share App Concept</h3>
+        <p class="meta">Management Team Case Project, Rutgers (Team 17)</p>
+        <p>With my team, I helped develop a business concept for a Rutgers-only ride-share app that connects student drivers already traveling between campuses with student riders for a small fee. We defined the customer value proposition, vision, mission, and core values, and named and branded the business.</p>
+        <p class="links"><a href="https://github.com/jae230-maker">View on GitHub</a></p>
+      </article>
+
+      <article class="project">
+        <h3>IDEA Hatchery Event Promotion</h3>
+        <p class="meta">Innovations Design and Entrepreneurship Academy, Rutgers</p>
+        <p>I design promotional graphics for IDEA Launch Labs and IDEA After Hours, two weekly programs at the Hatchery. The work includes a reusable Adobe Express template with a QR code students scan to earn Arc points, and an Instagram swipe post that lays out every event date and topic.</p>
+        <p class="links"><a href="https://github.com/jae230-maker">View on GitHub</a></p>
+      </article>
+
+      <article class="project">
+        <h3>High School Marketing and PR Campaigns</h3>
+        <p class="meta">Club and Program Marketer, Sep 2022 to Apr 2025</p>
+        <p>I led PR and social media campaigns for five student organizations. I designed flyers, graphics, and reels in Canva for Instagram and TikTok, and produced event recaps and short-form videos to keep followers engaged.</p>
+        <p class="result">Results: 75% more event attendance and engagement, and 65% growth in active membership.</p>
+        <p class="links"><a href="https://github.com/jae230-maker">View on GitHub</a></p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p><a href="mailto:janelle.a.edwards@rutgers.edu">janelle.a.edwards@rutgers.edu</a></p>
+    <p><a href="https://www.linkedin.com/in/janelle-edwards">linkedin.com/in/janelle-edwards</a></p>
+    <p><a href="https://github.com/jae230-maker">github.com/jae230-maker</a></p>
+    <p class="small">New Brunswick, NJ. Rutgers Business School, B.S. Marketing, May 2029.</p>
+  </div>
+</footer>
+
+</body>
+</html>
